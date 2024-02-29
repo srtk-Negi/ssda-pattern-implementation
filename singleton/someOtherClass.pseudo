@@ -11,7 +11,7 @@ public SomeOtherClass{
 public SomeOtherClass{
 
 	public main(){
-		Logger l = Logger.getInstance();
+		Logger l = Logger.getLogger(); /** CHANGE: the new logger 'l' is now instantiated using the getLogger() method and not the new keyword **/
 		l.info("hello from some other class!");
 	}
 }

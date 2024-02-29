@@ -1,3 +1,5 @@
+// ADDED THIS HDMIPlugAdapter CLASS TO ADAPT THE HDMIPlug TO THE VideoPlug INTERFACE.This class implements the VideoPlug interface so it is compatible with the VideoPlug requirement in VideoSocket. It also has a HDMIPlug object to which it delegates the digitalDisplay method. This class is the Adapter in the Adapter pattern.
+
 public class HDMIPlugAdapter implements VideoPlug{
     private HDMIPlug hdmiPlug;
 

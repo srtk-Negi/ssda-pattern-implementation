@@ -22,7 +22,7 @@ public class Logger{
 	}
 
 	// function to get an instance of the logger
-	public static Logger getInstance(){
+	public static Logger getLogger(){
 		if(logger == null){
 			logger = new Logger();
 		}

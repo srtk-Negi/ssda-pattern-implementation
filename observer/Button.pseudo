@@ -4,3 +4,23 @@ public class Button {
 		
 	}
 }
+
+/** CHANGED CODE / UPDATED CODE **/
+
+public class Button {
+	private List<Light> lights; /** CHANGED: List of lights that are controlled by the button
+
+	public Button() { /** CHANGED: Constructor to initialize the list of lights
+		this.lights = new List<Light>();
+	}
+
+	public void addLight(Light light) { /** CHANGED: Method to add a light to the list
+		this.lights.add(light);
+	}
+
+	public void press() {
+		for (Light light : lights) { /** CHANGED: Loop through all the lights and turn them on
+			light.turnOn();
+		}
+	}
+}
