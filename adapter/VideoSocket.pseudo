@@ -18,3 +18,27 @@ public class VideoSocket {
 		someOtherClass.plugDiagnostic(plug);
 	}
 }	
+
+
+/** CHANGED CODE / UPDATED CODE **/
+
+// NEW CLASS HDMIPlugAdapter CREATED TO ADAPT HDMIPlug TO VideoPlug
+
+public class VideoSocket {
+
+	public main(){
+
+		HDMIPlug hdmiPlug = new HDMIPlug();
+
+		// plug MUST be of type VideoPlug
+		VideoPlug plug = new HDMIPlugAdapter(hdmiPlug);
+
+		// call plug.display() 
+		plug.display(1024, 768);
+
+		// use plug in a method which only takes objects
+		// of type VideoPlug (i.e., it can't take HDMIPlugs)
+		// This line MUST be run on the plug
+		someOtherClass.plugDiagnostic(plug);
+	}
+}	

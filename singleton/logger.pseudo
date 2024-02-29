@@ -15,10 +15,10 @@ public class Logger {
 public class Logger{
 	private String log;
 	private static Logger logger = null;
-	
+
 	// Constructor
 	private Logger(){
-		// Initialize log
+		// Initialize logger
 	}
 
 	// function to get an instance of the logger
