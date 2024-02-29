@@ -5,3 +5,13 @@ public SomeClass{
 		l.info("hello world");
 	}
 }
+
+/** CHANGED CODE / UPDATED CODE **/
+
+public SomeClass{
+
+	public main(){
+		Logger l = Logger.getInstance();
+		l.info("hello world");
+	}
+}

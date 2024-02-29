@@ -9,3 +9,29 @@ public class Logger {
 		this.log.append(information);
 	}
 }
+
+/** CHANGED CODE / UPDATED CODE **/
+
+public class Logger{
+	private String log;
+	private static Logger logger = null;
+	
+	// Constructor
+	private Logger(){
+		// Initialize log
+	}
+
+	// function to get an instance of the logger
+	public static Logger getInstance(){
+		if(logger == null){
+			logger = new Logger();
+		}
+		return logger;
+	}
+
+	// Log something
+	public void info(String information){
+		this.log.append(information);
+	}
+	
+}
