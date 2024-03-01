@@ -1,0 +1,24 @@
+/** CHANGE: this file represents the model class and therefore will contain all the data logic and methods that are used to manipulate the data and interact with the database */
+
+// initialize database
+$db = getDatabase('myHost', 'mypassword', 'myDb');
+$table = "users";
+
+/** CHANGE: moved password hashing to the model because the hashed password will be going into the database */
+// hash password
+$pwHash = hash($pw1);
+
+
+/** CHANGE: moved the database query to create a new user to the model because the model is responsible for interacting with the database */
+// create user
+$success = $db->query("INSERT INTO $table (username, password) 
+    VALUES ($username, $pwHash);");
+
+
+/** CHANGE: created a function to get the creation status to the controller */
+function getCreationStatus($success) {
+    if($success)
+        return true;
+    else
+        return false;
+}

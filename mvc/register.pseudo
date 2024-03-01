@@ -1,3 +1,5 @@
+/** CHANGE: moved all this code into model, view and controller files **/
+
 // get registration information from the user
 $username = $_POST['username'];
 $pw1 = $_POST['password1'];

@@ -1,0 +1,33 @@
+/** CHANGE: this file represents the view class and therefore will be responsible for what the user sees and interacts with. It will also be responsible for the user input and will pass that input to the controller class. */
+
+/** CHANGE: the view class will be responsible for the user input and will pass that input to the controller class to check for validity*/
+validity = controller.validateUserInput('username', 'password', 'password2');
+
+/** If the input is invalid, the view class will display an error message to the user */
+if (!validity) {
+    echo "Invalid input";
+    return;
+}
+
+/** If the input is valid, set the username **/
+$title = "<title>Welcome $username</title>";
+
+/** Get the season from the controller class and set the h1Style based on the season */
+season = controller.getCurrentSeason();
+if(season == 'summer');
+    $h1Style = '<h1 style="color: RED">';
+else
+    $h1Style = '<h1 style="color: BLUE">';
+
+
+/** The view class will be responsible for displaying the user's username and the season */
+echo "<html>
+            <head>
+                $title
+            </head>
+            <body>
+                $h1Style
+                    Welcome $username
+                </h1>
+            </body>
+        </html>";

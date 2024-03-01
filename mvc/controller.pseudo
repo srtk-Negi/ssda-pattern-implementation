@@ -1,0 +1,30 @@
+/** CHANGE: this file represents the controller class and therefore will act as an intermediary between the model and the view. It will handle the user input and update the view accordingly. */
+
+/* Moved all the user input validation here */
+
+// get registration information from the user
+
+$username = $_POST['username'];
+$pw1 = $_POST['password1'];
+$pw2 = $_POST['password2'];
+
+// validate 
+if ($pw1 != $pw2 || !valid($pw1) || !valid($username))
+    return redirectBack(400);
+
+
+/** CHANGE: calling the getCreationStatus method from the model class to check if the user has been created instead of handling that in the controller */
+if(!model.getCreationStatus())
+    return redirectBack(500);
+
+
+/* The logic to determine the current season has been moved to the controller class. This will return the current season to the view class and then the view class can handle that accordingly*/
+
+// set up opening tag 
+function getCurrentSeason(){
+    return currentSeason
+}
+
+
+
+
